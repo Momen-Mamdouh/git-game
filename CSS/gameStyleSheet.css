@@ -1,0 +1,137 @@
+:root{
+    --main-font: "Comfortaa", sans-serif, cursive;
+    --details-section-font: "Nerko One", cursive;
+
+    --main-color: #5E6165;
+    --light-color: rgb(255,255,255);
+    --nav-color: #3A497B;
+    --nav-active-color: #09c;
+
+    --dipalyed-details-section-bg: rgba(39, 39, 41, 1);
+}
+
+/* *=============================Start MAIN==================================== */
+body{
+    font-family: var(--main-font);
+}
+
+
+/* *=============================End MAIN==================================== */
+
+
+
+
+/* *=============================Start Home-Section==================================== */
+.home-section{
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9));
+    min-height: 100vh;
+}
+
+.navbar-section{
+    font-size: 0.75rem;
+    background-color: var(--nav-color);
+}
+.navbar-section .newNav{
+    position: sticky;
+    top: 0;
+ 
+}
+.navbar-nav .nav-link.active{
+    color: var(--nav-active-color);
+}
+.navbar-section a {
+    color: var(--light-color);
+    text-transform: uppercase;
+}
+.gameData .card{
+    height: 100%;
+    filter: grayscale(0.7);
+    -webkit-filter: grayscale(0.7);
+    transition: filter  0.5s 0.1s, transform 0.5s;
+    -webkit-transition: filter  0.5s 0.1s, transform 0.5s;
+    -moz-transition: filter  0.5s 0.1s, transform 0.5s;
+    -ms-transition: filter  0.5s 0.1s, transform 0.5s;
+    -o-transition: filter  0.5s 0.1s, transform 0.5s;
+}
+.gameData .card:hover{
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+.game-cards-section footer span {
+    background-color: var(--main-color);
+}
+
+/* *=============================End Home-Section==================================== */
+
+/* *=============================End Details-Section==================================== */
+
+.details-section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(var(--dipalyed-details-section-bg), var(--dipalyed-details-section-bg));    
+    
+}
+.details-section header h1{
+    font-family: var(--details-section-font);
+    font-size: 1.75rem ;
+    font-weight: 500;
+}
+.details-section header svg{
+    color: var(--light-color);
+}  
+
+/* *=============================End Details-Section==================================== */
+.footer-section{
+    border: solid;
+}
+
+/* *=============================Start Loading==================================== */
+.loading {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background-color: #272b30e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 4px solid #fff;
+    border-right: 4px solid transparent;
+    animation: spin 1s linear infinite;
+    position: relative;
+    -webkit-animation: spin 1s linear infinite;
+}
+ .loader::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-left: 4px solid #ff3d00;
+    border-bottom: 4px solid transparent;
+    animation: spin 0.5s linear infinite reverse;
+    -webkit-animation: spin 0.5s linear infinite reverse;
+}
+ @keyframes spin {
+    0% {
+       transform: rotate(0deg);
+    }
+    100% {
+       transform: rotate(360deg);
+    }
+ }
+ /* *=============================End Loading==================================== */
